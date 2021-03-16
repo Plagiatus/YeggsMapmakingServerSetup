@@ -7,4 +7,4 @@
 !/project_assets/
 !.gitignore
 !/world_files/
-!/.github/workflows
+!/.github/workflows/*
