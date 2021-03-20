@@ -10,12 +10,12 @@ jobs:
       - name: Get latest code 👀
         uses: actions/checkout@v2
       - name: Sync files 📁
-        uses: sebastianpopp/ftp-action@v2.0.0
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          host:  ${{ secrets.ftp_server }}
-          user:  ${{ secrets.ftp_username }}
-          password: ${{ secrets.ftp_password }}
-          remoteDir: "./world"
+          ftp-server:  ${{ secrets.ftp_server }}
+          ftp-username:  ${{ secrets.ftp_username }}
+          ftp-password: ${{ secrets.ftp_password }}
+          git-ftp-args: --insecure
       - name: RCON Connection 🔌
         uses: Plagiatus/RCON-Action@v0.1
         with:
